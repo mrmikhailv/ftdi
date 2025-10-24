@@ -62,6 +62,25 @@ type USBDev struct {
 	d *C.struct_libusb_device
 }
 
+func (u *USBDev) GetPath() (byte, []byte, error) {
+	buf := [128]byte{}
+	result := C.libusb_get_port_numbers(
+		u.d,
+		(*C.uint8_t)(unsafe.Pointer(&buf[0])),
+		C.int(len(buf)),
+	)
+
+	castedResult := int(result)
+
+	if castedResult <= 0 {
+		return 0, []byte{}, errors.New("cannot get device path")
+	}
+
+	busNum := C.libusb_get_bus_number(u.d)
+
+	return byte(busNum), buf[:castedResult], nil
+}
+
 func (u *USBDev) unref() {
 	if u.d == nil {
 		panic("USBDev.unref on uninitialized device")
