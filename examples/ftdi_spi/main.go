@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/ziutek/ftdi"
+	"github.com/mrmikhailv/ftdi"
 )
 
 func main() {

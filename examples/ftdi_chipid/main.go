@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/ziutek/ftdi"
 	"os"
+
+	"github.com/mrmikhailv/ftdi"
 )
 
 func checkErr(err error) {

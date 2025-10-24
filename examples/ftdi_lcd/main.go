@@ -10,10 +10,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/ziutek/ftdi"
-	"github.com/ziutek/lcd/hdc"
 	"os"
 	"time"
+
+	"github.com/mrmikhailv/ftdi"
+	"github.com/ziutek/lcd/hdc"
 )
 
 func checkErr(err error) {

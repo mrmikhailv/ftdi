@@ -9,9 +9,10 @@
 package main
 
 import (
-	"github.com/ziutek/ftdi"
 	"log"
 	"time"
+
+	"github.com/mrmikhailv/ftdi"
 )
 
 func checkErr(err error) {

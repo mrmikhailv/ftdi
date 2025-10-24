@@ -1,4 +1,4 @@
-module github.com/ziutek/ftdi
+module github.com/mrmikhailv/ftdi
 
 go 1.13
 

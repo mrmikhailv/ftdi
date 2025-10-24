@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/ziutek/ftdi"
+	"github.com/mrmikhailv/ftdi"
 )
 
 func checkErr(err error) {

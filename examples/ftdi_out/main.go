@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/ziutek/ftdi"
 	"os"
 	"strconv"
+
+	"github.com/mrmikhailv/ftdi"
 )
 
 func errorExit(err error) {
